@@ -1,28 +1,16 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ninja Game</title>
+	<link rel="stylesheet" href="style.css">
+</head>
 <body>
 	<div id='background'>
-        <div id='character' style='position:absolute; top:100px; left:450px; background-image: url("img/down1.png"); width:59px; height:86px;'></div>
-    </div>
-	<script type="text/javascript">
-		let leftValue = 450, topValue = 100;
-		document.onkeydown = function(evt){
-			// console.log(evt);
-			if(evt.keyCode == 37 && leftValue > 0){ // LEFT
-				leftValue -= 10;
-				// console.log(leftValue);
-				document.getElementById("character").style.left = leftValue + "px";
-				
-				} else if(evt.keyCode ==39 && leftValue < 500){ //RIGHT
-					leftValue += 10
-					document.getElementById("character").style.left = leftValue + "px"
-				} else if(evt.keyCode == 38 && topValue > 0){ //UP
-					topValue -= 10;
-					document.getElementById("character").style.top = topValue + "px"
-				} else if(evt.keyCode == 40 && topValue < 500){ // DOWN
-					topValue += 10;
-					document.getElementById("character").style.top = topValue + "px"
-				}
-		}
-    </script>
+		<div id='character'  height:86px;'></div>
+	</div>
+	<script type="text/javascript" src="script.js"></script>
+	
 </body>
 </html>
