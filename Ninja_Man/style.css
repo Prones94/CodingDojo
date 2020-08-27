@@ -1,0 +1,70 @@
+.world {
+    display: flex;
+    flex-wrap: wrap;
+    width: 560px;
+    height: 560px;
+    border: 2px solid black;
+}
+
+.world div {
+    width: 20px;
+    height: 20px;
+}
+.wall {
+    background-color: blue;
+}
+.sushi {
+    background-color: black;
+    background-image: url('./images/sushi.png');
+    background-size: contain;
+    display: inline-block;
+}
+.onigiri {
+    background-color: black;
+    background-image: url('./images/onigiri.png');
+    background-size: contain;
+    display: inline-block;
+}
+
+.ninjaman {
+    background-image: url(./images/ninja.gif);
+    background-color: black;
+    background-size: contain;
+    display: inline-block;
+}
+
+.bluey {
+    background-color: transparent;
+    background-image: url('./images/bluey.gif');
+    background-size: contain;
+    display: inline-block;
+}
+
+.pinky {
+    background-image: url('./images/pinky.gif');
+    background-color: transparent;
+    background-size: contain;
+    display: inline-block;
+}
+
+.pumpky {
+    background-image: url('./images/pumpky.gif');
+    background-color: transparent;
+    background-size: contain;
+    display: inline-block;
+}
+
+.red {
+    background-image: url('./images/red.gif');
+    background-color: transparent;
+    background-size: contain;
+    display: inline-block;
+}
+
+.scaredy {
+    background-image: url('./images/scaredy.png');
+    background-size: contain;
+    display: inline-block;
+    background-color: transparent;
+}
+
