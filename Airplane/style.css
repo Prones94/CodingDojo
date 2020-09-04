@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    height: 100%;
+    background: #2980B9;
+    background: -webkit-linear-gradient(to bottom, #FFFFFF, #6DD5FA, #2980B9);  
+    background: linear-gradient(to bottom, #FFFFFF, #6DD5FA, #2980B9); 
+
+    
+}
+
+#ocean {
+    margin: 15% auto;
+    background-image: url(./images/ocean.jpg);
+    width: 900px;
+    height: 700px;
+}
+
+.player {
+    width: 70px;
+    height: 75px;
+    background-image: url(./images/player.png);
+    position: absolute;
+}
+
+.enemy {
+    width: 70px;
+    height: 75px;
+    background-image: url(./images/enemy.png);
+    position: absolute;
+}
