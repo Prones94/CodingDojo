@@ -33,3 +33,10 @@ body {
     background-image: url(./images/enemy.png);
     position: absolute;
 }
+
+.missile {
+    width: 4px;
+    height:15px;
+    position: absolute;
+    background-color: yellow;
+}

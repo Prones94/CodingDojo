@@ -12,6 +12,8 @@ let enemies = [
     {left:350, top:250},
 ];
 
+let missiles = [];
+
 const drawPlayer = () => {
     content = "";
     content = `<div class="player" style="left: ${player.left}px; top: ${player.top}px;"></div>`
@@ -22,6 +24,30 @@ const drawEnemies = () => {
     for(let enemy of enemies) {
         content += `<div class="enemy" style="left: ${enemy.left}px; top: ${enemy.top}px;"></div>`
         document.getElementById("enemies").innerHTML = content;
+        
+    }
+    
+}
+
+const drawMissiles = () => {
+    content = "";
+    for(let i = 0; i <missiles.length; i++) {
+        content += "<div class='missile' style='left:"+missiles[i].left+"px; top:"+missiles[i].top+"px'></div>"
+        
+    }
+    console.log('what what', content);
+    document.querySelector(".missiles").innerHTML = content;
+}
+
+const moveMissiles = () => {
+    for(missile of missiles) {
+        missile.top -= 20;
+    }
+}
+
+const moveEnemies = () => {
+    for(let enemy of enemies){
+        enemy.top += 10;
     }
 }
 
@@ -41,14 +67,29 @@ document.onkeydown = function(e) {
                 player.top += 10;
                 break;
             }
-            case 38:      // UP
+        case 38:      // UP
             if(player.top != 660){
                 player.top -= 10;
                 break;
-            }
+        }
+        case 32:        // FIRE
+            missiles.push({left: player.left+34, top: player.top-15});
+            break;
+
     }
     drawPlayer();
 }
 
-drawPlayer();
-drawEnemies();
+
+
+const gameLoop = () => {
+    drawPlayer();
+    // moveEnemies();
+    drawEnemies();
+    moveMissiles();
+    drawMissiles();
+    setTimeout(gameLoop, 300)
+}
+
+gameLoop();
+
